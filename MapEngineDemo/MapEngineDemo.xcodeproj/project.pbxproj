@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		813292222B33F1C900B17383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 813292212B33F1C900B17383 /* AppDelegate.m */; };
+		813292252B33F1C900B17383 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 813292242B33F1C900B17383 /* SceneDelegate.m */; };
+		813292282B33F1C900B17383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813292272B33F1C900B17383 /* ViewController.m */; };
+		8132922B2B33F1C900B17383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813292292B33F1C900B17383 /* Main.storyboard */; };
+		8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8132922C2B33F1CA00B17383 /* Assets.xcassets */; };
+		813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8132922E2B33F1CA00B17383 /* LaunchScreen.storyboard */; };
+		813292332B33F1CA00B17383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 813292322B33F1CA00B17383 /* main.m */; };
+		81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; };
+		81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8132923F2B33F35800B17383 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8132921D2B33F1C900B17383 /* MapEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		813292202B33F1C900B17383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		813292212B33F1C900B17383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		813292232B33F1C900B17383 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		813292242B33F1C900B17383 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		813292262B33F1C900B17383 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		813292272B33F1C900B17383 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8132922A2B33F1C900B17383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8132922C2B33F1CA00B17383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8132922F2B33F1CA00B17383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		813292312B33F1CA00B17383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		813292322B33F1CA00B17383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8132923A2B33F1F700B17383 /* CLMMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLMMapKit.framework; sourceTree = "<group>"; };
+		81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starmap_2020_4k_4096.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8132921A2B33F1C900B17383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		813292142B33F1C900B17383 = {
+			isa = PBXGroup;
+			children = (
+				8132921F2B33F1C900B17383 /* MapEngineDemo */,
+				8132921E2B33F1C900B17383 /* Products */,
+				81D944692B33F52B00DD4D26 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8132921E2B33F1C900B17383 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8132921D2B33F1C900B17383 /* MapEngineDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8132921F2B33F1C900B17383 /* MapEngineDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81D9446E2B33F5EE00DD4D26 /* Resources */,
+				813292392B33F1E600B17383 /* MapEngine */,
+				813292202B33F1C900B17383 /* AppDelegate.h */,
+				813292212B33F1C900B17383 /* AppDelegate.m */,
+				813292232B33F1C900B17383 /* SceneDelegate.h */,
+				813292242B33F1C900B17383 /* SceneDelegate.m */,
+				813292262B33F1C900B17383 /* ViewController.h */,
+				813292272B33F1C900B17383 /* ViewController.m */,
+				813292292B33F1C900B17383 /* Main.storyboard */,
+				8132922C2B33F1CA00B17383 /* Assets.xcassets */,
+				8132922E2B33F1CA00B17383 /* LaunchScreen.storyboard */,
+				813292312B33F1CA00B17383 /* Info.plist */,
+				813292322B33F1CA00B17383 /* main.m */,
+			);
+			path = MapEngineDemo;
+			sourceTree = "<group>";
+		};
+		813292392B33F1E600B17383 /* MapEngine */ = {
+			isa = PBXGroup;
+			children = (
+				8132923A2B33F1F700B17383 /* CLMMapKit.framework */,
+			);
+			path = MapEngine;
+			sourceTree = "<group>";
+		};
+		81D944692B33F52B00DD4D26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81D9446E2B33F5EE00DD4D26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8132921C2B33F1C900B17383 /* MapEngineDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813292362B33F1CA00B17383 /* Build configuration list for PBXNativeTarget "MapEngineDemo" */;
+			buildPhases = (
+				813292192B33F1C900B17383 /* Sources */,
+				8132921A2B33F1C900B17383 /* Frameworks */,
+				8132921B2B33F1C900B17383 /* Resources */,
+				813292402B33F38200B17383 /* ShellScript */,
+				8132923F2B33F35800B17383 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapEngineDemo;
+			productName = MapEngineDemo;
+			productReference = 8132921D2B33F1C900B17383 /* MapEngineDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		813292152B33F1C900B17383 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8132921C2B33F1C900B17383 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 813292182B33F1C900B17383 /* Build configuration list for PBXProject "MapEngineDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 813292142B33F1C900B17383;
+			productRefGroup = 8132921E2B33F1C900B17383 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8132921C2B33F1C900B17383 /* MapEngineDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8132921B2B33F1C900B17383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */,
+				8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */,
+				81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */,
+				8132922B2B33F1C900B17383 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		813292402B33F38200B17383 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE_PATH=\"${PROJECT_DIR}/MapEngineDemo/MapEngine/CLMMapKit.framework/default.metallib\"\nTARGET_PATH=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\nmkdir -p $TARGET_PATH\ncp -R $SOURCE_PATH \"$TARGET_PATH/default.metallib\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		813292192B33F1C900B17383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813292282B33F1C900B17383 /* ViewController.m in Sources */,
+				813292222B33F1C900B17383 /* AppDelegate.m in Sources */,
+				813292332B33F1CA00B17383 /* main.m in Sources */,
+				813292252B33F1C900B17383 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		813292292B33F1C900B17383 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8132922A2B33F1C900B17383 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8132922E2B33F1CA00B17383 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8132922F2B33F1CA00B17383 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		813292342B33F1CA00B17383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		813292352B33F1CA00B17383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		813292372B33F1CA00B17383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CN45TDW9M9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapEngineDemo/Map\\ Engine",
+					"$(PROJECT_DIR)/MapEngineDemo/Map\\ Engine",
+					"$(PROJECT_DIR)/MapEngineDemo/MapEngine",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapEngineDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartolake.MapEngineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		813292382B33F1CA00B17383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CN45TDW9M9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapEngineDemo/Map\\ Engine",
+					"$(PROJECT_DIR)/MapEngineDemo/Map\\ Engine",
+					"$(PROJECT_DIR)/MapEngineDemo/MapEngine",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapEngineDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartolake.MapEngineDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		813292182B33F1C900B17383 /* Build configuration list for PBXProject "MapEngineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813292342B33F1CA00B17383 /* Debug */,
+				813292352B33F1CA00B17383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		813292362B33F1CA00B17383 /* Build configuration list for PBXNativeTarget "MapEngineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813292372B33F1CA00B17383 /* Debug */,
+				813292382B33F1CA00B17383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 813292152B33F1C900B17383 /* Project object */;
+}
