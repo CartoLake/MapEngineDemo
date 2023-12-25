@@ -17,6 +17,9 @@
 		81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; };
 		81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */; };
+		81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */ = {isa = PBXBuildFile; fileRef = 81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */; };
+		81D944832B3A300500DD4D26 /* AT0-0005SinglePart.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */; };
+		81D944842B3A300500DD4D26 /* proj.db in Resources */ = {isa = PBXBuildFile; fileRef = 81D944812B3A300500DD4D26 /* proj.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +51,9 @@
 		813292322B33F1CA00B17383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8132923A2B33F1F700B17383 /* CLMMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLMMapKit.framework; sourceTree = "<group>"; };
 		81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starmap_2020_4k_4096.jpg; sourceTree = "<group>"; };
+		81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00329IL29.PDF; sourceTree = "<group>"; };
+		81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AT0-0005SinglePart.geojson"; sourceTree = "<group>"; };
+		81D944812B3A300500DD4D26 /* proj.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = proj.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */,
+				81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */,
+				81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */,
+				81D944812B3A300500DD4D26 /* proj.db */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,7 +193,10 @@
 				813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */,
 				8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */,
 				81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */,
+				81D944842B3A300500DD4D26 /* proj.db in Resources */,
+				81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */,
 				8132922B2B33F1C900B17383 /* Main.storyboard in Resources */,
+				81D944832B3A300500DD4D26 /* AT0-0005SinglePart.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

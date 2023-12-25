@@ -16,6 +16,8 @@
 #import <CLMMapKit/CLMWebTileMapLayer.h>
 #import <CLMMapKit/CLMTileMapLayer.h>
 #import <CLMMapKit/CLMEdgeEfffectMapLayer.h>
+#import <CLMMapKit/CLMShapeMapLayer.h>
+#import <CLMMapKit/CLMGeoPDFMapLayer.h>
 
 //! Project version number for CLMMapKitLite.
 FOUNDATION_EXPORT double CLMMapKitLiteVersionNumber;

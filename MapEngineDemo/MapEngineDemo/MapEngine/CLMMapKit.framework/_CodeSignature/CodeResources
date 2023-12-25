@@ -8,9 +8,13 @@
 		<data>
 		K99coUJ+wfngSAwBJ6HfSA0WAUE=
 		</data>
+		<key>Headers/CLMGeoPDFMapLayer.h</key>
+		<data>
+		dyOvRc3RU/L6iwrr+Tu+UeYA6nI=
+		</data>
 		<key>Headers/CLMMapKitLite.h</key>
 		<data>
-		enBff1h5MzLfOz556CSmHBodWoM=
+		FGgytVeD0ndj2+oj4u6uIoMsJO0=
 		</data>
 		<key>Headers/CLMMapLayer.h</key>
 		<data>
@@ -22,7 +26,11 @@
 		</data>
 		<key>Headers/CLMMapView.h</key>
 		<data>
-		kefCjHl+LABQ605ZzxTiNC1P9hk=
+		FoQ1YD0C7lcXLOgFjLxEsHGQZg4=
+		</data>
+		<key>Headers/CLMShapeMapLayer.h</key>
+		<data>
+		O00uPnH+AC1t4ciFVY1VUZkGq4I=
 		</data>
 		<key>Headers/CLMTileMapLayer.h</key>
 		<data>
@@ -50,11 +58,18 @@
 			9fVGbEEvagwox03IUY7xCBuuh9qYkzylCbdUj8SF5es=
 			</data>
 		</dict>
+		<key>Headers/CLMGeoPDFMapLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3M63wGfpBjBcTXsAOOCWXBz68yYS6U9Yf+0RNHbb9BI=
+			</data>
+		</dict>
 		<key>Headers/CLMMapKitLite.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BEoLlMYDrGNJ7fQ9yMDWR8oMr4yFrCxqYwpNOAWgNL8=
+			2t7uHnsO/l1RfaQq8xL7it6OBf1775cQOlhkyyF2VVw=
 			</data>
 		</dict>
 		<key>Headers/CLMMapLayer.h</key>
@@ -75,7 +90,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xt48USZJGeHee09VhZkjtIn3Ln5lWWRYRcUZDHugiqI=
+			YimdvZ2wQRht7LnfxMA3oak8EmpjpHcLr3/JZA64dUg=
+			</data>
+		</dict>
+		<key>Headers/CLMShapeMapLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NWaEd2pkXci1+AYJdqAQvL/URUwRXEBigUM3oQFwQww=
 			</data>
 		</dict>
 		<key>Headers/CLMTileMapLayer.h</key>

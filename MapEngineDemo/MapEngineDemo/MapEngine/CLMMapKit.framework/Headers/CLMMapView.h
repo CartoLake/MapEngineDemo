@@ -126,27 +126,6 @@ typedef enum {
 //! Returns the point to pixel scale
 -(CGFloat)pointToPixelScale;
 
-//! Tilt degrees
-@property double tiltDeg;
-
-//! Rotationg degrees
-@property double rotateDeg;
-
-//! Sun Yaw Deg
-@property double sunYawDeg;
-
-//! Sun Pitch Deg
-@property double sunPitchDeg;
-
-//! Sun Illumniation Scale
-@property double sunIlluminanceScale;
-
-//! Auto sun
-@property BOOL autoSun;
-
-//! Manual Sun Time
-@property NSDate *manualSunTimestamp;
-
 //! Save the next frame buffer
 -(void)saveNextFrameBuffer:(MapImageCaptureCompleted)completionHandler;
 

@@ -16,6 +16,12 @@
 
 @end
 
+#define zOrderGrayBase      5
+#define zOrderOSMRaster     100
+#define zOrderATTrail       1000
+#define zOrderGeoPDF        1500
+#define zOrderEdgeEffect    2000
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -37,6 +43,8 @@
     [self addGrayBaseLayer];
     [self addBaseMapTileLayer];
     [self addEdgeEffectLayer];
+    [self addLongTrailLayer];
+    [self addPDFMapLayer];
     
     // Set the map's initial center
     [self setInitialCenter];
@@ -59,7 +67,7 @@
     // This adds the immediate gray base layer which is a placeholder when tiles are loading
     CLMTileMapLayer *baseLayer = [[CLMTileMapLayer alloc] init];
     baseLayer.universalImage = [self baseGray];
-    baseLayer.zOrder = 0;
+    baseLayer.zOrder = zOrderGrayBase;
     [self.mapView addMapLayer:baseLayer];
     
 }
@@ -72,7 +80,8 @@
     NSString *urlPattern = @"https://tile.openstreetmap.org/{z}/{x}/{y}.png";
     CLMWebTileMapLayer *tileLayer = [[CLMWebTileMapLayer alloc] initWithURLPattern:urlPattern
                                                                          cacheName:nil];
-    tileLayer.zOrder = 1000;
+    tileLayer.zOrder = zOrderOSMRaster;
+    tileLayer.maxTileZoom = 22;
     [self.mapView addMapLayer:tileLayer];
       
 }
@@ -81,10 +90,32 @@
     
     // This adds the darkened edge to help the sense of depth perception
     CLMEdgeEfffectMapLayer *edgeEffect = [[CLMEdgeEfffectMapLayer alloc] init];
-    edgeEffect.zOrder = 2000;
+    edgeEffect.zOrder = zOrderEdgeEffect;
     [self.mapView addMapLayer:edgeEffect];
 
 }
+
+-(void)addLongTrailLayer {
+        
+    NSString *geoJSON = [[NSBundle mainBundle] pathForResource:@"AT0-0005SinglePart" ofType:@"geojson"];
+    CLMShapeMapLayer *ATShapeMapLayer = [[CLMShapeMapLayer alloc] init];
+    ATShapeMapLayer.zOrder = zOrderATTrail;
+    [self.mapView addMapLayer:ATShapeMapLayer];
+    [ATShapeMapLayer setLayerShapeColor:20.0/255.0 green:20.0/255.0 blue:20.0/255.0 alpha:1.0];
+    [ATShapeMapLayer loadGeoJSONFile:geoJSON];
+}
+
+-(void)addPDFMapLayer {
+    
+    CLMGeoPDFMapLayer *pdfMapLayer = [[CLMGeoPDFMapLayer alloc] init];
+    [self.mapView addMapLayer:pdfMapLayer];
+    pdfMapLayer.zOrder = zOrderGeoPDF;
+    NSString *approachPlatePDF = [[NSBundle mainBundle] pathForResource:@"00329IL29" ofType:@"PDF"];
+    [pdfMapLayer addPDFFile:approachPlatePDF];
+
+}
+
+
 
 -(void)setInitialCenter {
     
