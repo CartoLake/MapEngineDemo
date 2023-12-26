@@ -9,6 +9,10 @@ GeoPDF
 <img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/03faea71-1bb2-46f4-81e5-b76542ae1850" width=50% height=50%><br>
 Import GeoJSON
 
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/b59ce7be-c1fb-4782-99e8-a8368388d757" width=50% height=50%><br>
+Bulk Animated Markers
+
+
 
 Welcome to the CartoLake MapEngineDemo repository!  This is an example project showing the capability of the CartoLake map engine.  This is very preliminary and is subject to change over the coming weeks as we release more of the functionality of the engine in the demo framework.
 
