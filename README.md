@@ -1,7 +1,7 @@
 # MapEngineDemo
 
 <table><tr><td>
-<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" width=50% height=50%><br>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" width=250px height=187px><br>
 Spherical Projection
 </td>
   <td>
