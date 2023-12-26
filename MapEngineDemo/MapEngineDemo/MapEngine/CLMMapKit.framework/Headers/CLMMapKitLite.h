@@ -19,6 +19,11 @@
 #import <CLMMapKit/CLMShapeMapLayer.h>
 #import <CLMMapKit/CLMGeoPDFMapLayer.h>
 
+// Markers
+#import <CLMMapKit/CLMBulkMarker.h>
+#import <CLMMapKit/CLMBulkMarkerGroup.h>
+#import <CLMMapKit/CLMBulkMarkerMapLayer.h>
+
 //! Project version number for CLMMapKitLite.
 FOUNDATION_EXPORT double CLMMapKitLiteVersionNumber;
 

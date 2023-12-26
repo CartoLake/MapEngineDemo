@@ -20,6 +20,9 @@
 		81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */ = {isa = PBXBuildFile; fileRef = 81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */; };
 		81D944832B3A300500DD4D26 /* AT0-0005SinglePart.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */; };
 		81D944842B3A300500DD4D26 /* proj.db in Resources */ = {isa = PBXBuildFile; fileRef = 81D944812B3A300500DD4D26 /* proj.db */; };
+		81D944962B3A6ACF00DD4D26 /* Airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D944952B3A6ACF00DD4D26 /* Airplane.png */; };
+		81D9449C2B3A6ADE00DD4D26 /* TrafficManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D9449A2B3A6ADE00DD4D26 /* TrafficManager.m */; };
+		81D9449D2B3A6ADE00DD4D26 /* TrafficItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D9449B2B3A6ADE00DD4D26 /* TrafficItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +57,11 @@
 		81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00329IL29.PDF; sourceTree = "<group>"; };
 		81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AT0-0005SinglePart.geojson"; sourceTree = "<group>"; };
 		81D944812B3A300500DD4D26 /* proj.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = proj.db; sourceTree = "<group>"; };
+		81D944952B3A6ACF00DD4D26 /* Airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airplane.png; sourceTree = "<group>"; };
+		81D944982B3A6ADE00DD4D26 /* TrafficManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficManager.h; sourceTree = "<group>"; };
+		81D944992B3A6ADE00DD4D26 /* TrafficItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficItem.h; sourceTree = "<group>"; };
+		81D9449A2B3A6ADE00DD4D26 /* TrafficManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficManager.m; sourceTree = "<group>"; };
+		81D9449B2B3A6ADE00DD4D26 /* TrafficItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 		8132921F2B33F1C900B17383 /* MapEngineDemo */ = {
 			isa = PBXGroup;
 			children = (
+				81D944972B3A6ADE00DD4D26 /* TrafficDemo */,
 				81D9446E2B33F5EE00DD4D26 /* Resources */,
 				813292392B33F1E600B17383 /* MapEngine */,
 				813292202B33F1C900B17383 /* AppDelegate.h */,
@@ -123,12 +132,24 @@
 		81D9446E2B33F5EE00DD4D26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81D944952B3A6ACF00DD4D26 /* Airplane.png */,
 				81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */,
 				81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */,
 				81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */,
 				81D944812B3A300500DD4D26 /* proj.db */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		81D944972B3A6ADE00DD4D26 /* TrafficDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81D944982B3A6ADE00DD4D26 /* TrafficManager.h */,
+				81D944992B3A6ADE00DD4D26 /* TrafficItem.h */,
+				81D9449A2B3A6ADE00DD4D26 /* TrafficManager.m */,
+				81D9449B2B3A6ADE00DD4D26 /* TrafficItem.m */,
+			);
+			path = TrafficDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +214,7 @@
 				813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */,
 				8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */,
 				81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */,
+				81D944962B3A6ACF00DD4D26 /* Airplane.png in Resources */,
 				81D944842B3A300500DD4D26 /* proj.db in Resources */,
 				81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */,
 				8132922B2B33F1C900B17383 /* Main.storyboard in Resources */,
@@ -228,8 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				813292282B33F1C900B17383 /* ViewController.m in Sources */,
+				81D9449C2B3A6ADE00DD4D26 /* TrafficManager.m in Sources */,
 				813292222B33F1C900B17383 /* AppDelegate.m in Sources */,
 				813292332B33F1CA00B17383 /* main.m in Sources */,
+				81D9449D2B3A6ADE00DD4D26 /* TrafficItem.m in Sources */,
 				813292252B33F1C900B17383 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

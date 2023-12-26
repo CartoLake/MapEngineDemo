@@ -7,12 +7,15 @@
 
 #import "ViewController.h"
 #import <CLMMapKit/CLMMapKitLite.h>
+#import "TrafficManager.h"
 
 @interface ViewController ()
 
 @property CLMMapView *mapView;
 @property UIButton *zoomInBtn;
 @property UIButton *zoomOutBtn;
+
+@property TrafficManager *trafficManager;
 
 @end
 
@@ -45,6 +48,7 @@
     [self addEdgeEffectLayer];
     [self addLongTrailLayer];
     [self addPDFMapLayer];
+    [self addTrafficLayer];
     
     // Set the map's initial center
     [self setInitialCenter];
@@ -113,6 +117,12 @@
     NSString *approachPlatePDF = [[NSBundle mainBundle] pathForResource:@"00329IL29" ofType:@"PDF"];
     [pdfMapLayer addPDFFile:approachPlatePDF];
 
+}
+
+-(void)addTrafficLayer {
+    
+    self.trafficManager = [[TrafficManager alloc] initWithMapView:self.mapView];
+    
 }
 
 

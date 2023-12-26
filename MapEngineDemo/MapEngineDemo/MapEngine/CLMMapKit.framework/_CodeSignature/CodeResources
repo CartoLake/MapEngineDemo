@@ -4,6 +4,18 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/CLMBulkMarker.h</key>
+		<data>
+		KNqk2SnvoQ19Np1is08xOv1WGo4=
+		</data>
+		<key>Headers/CLMBulkMarkerGroup.h</key>
+		<data>
+		fjr8MijhBZGadLBcVgfgxTcNTIU=
+		</data>
+		<key>Headers/CLMBulkMarkerMapLayer.h</key>
+		<data>
+		ElOw3LUKVrwQ0fWma59GCZd5myM=
+		</data>
 		<key>Headers/CLMEdgeEfffectMapLayer.h</key>
 		<data>
 		K99coUJ+wfngSAwBJ6HfSA0WAUE=
@@ -14,7 +26,7 @@
 		</data>
 		<key>Headers/CLMMapKitLite.h</key>
 		<data>
-		FGgytVeD0ndj2+oj4u6uIoMsJO0=
+		1HSxDntblHdZ1E0hm8EIO35txHw=
 		</data>
 		<key>Headers/CLMMapLayer.h</key>
 		<data>
@@ -51,6 +63,27 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/CLMBulkMarker.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pQ3k2ZqZhMvCgula03Iqu+QHXVkM/FuxnfmjcP80ptM=
+			</data>
+		</dict>
+		<key>Headers/CLMBulkMarkerGroup.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z19sEDXMpcMsmpgSKLvoh8fo6lqWxLNEIZ81Cg4gaFI=
+			</data>
+		</dict>
+		<key>Headers/CLMBulkMarkerMapLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CzSM4ZJ2jtdUZ/tG4VT0emR6QgajC+x3RNaixaXe80s=
+			</data>
+		</dict>
 		<key>Headers/CLMEdgeEfffectMapLayer.h</key>
 		<dict>
 			<key>hash2</key>
@@ -69,7 +102,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2t7uHnsO/l1RfaQq8xL7it6OBf1775cQOlhkyyF2VVw=
+			Vmo+W8H4+OgExPamHy5PphbbMZeGcl70mZnwdtrhcfw=
 			</data>
 		</dict>
 		<key>Headers/CLMMapLayer.h</key>
