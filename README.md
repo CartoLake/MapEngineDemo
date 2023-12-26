@@ -1,21 +1,21 @@
 # MapEngineDemo
 
 <table><tr><td>
-<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" width=250px height=187px><br>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" width=400px height=300px><br>
 Spherical Projection
 </td>
   <td>
-<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/7987e50f-139c-4452-b4af-5a49fe92dbab" width=50% height=50%><br>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/7987e50f-139c-4452-b4af-5a49fe92dbab" width=400px height=300px><br>
 GeoPDF
     </td>
 </tr>
 <tr>
     <td>
-<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/03faea71-1bb2-46f4-81e5-b76542ae1850" width=50% height=50%><br>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/03faea71-1bb2-46f4-81e5-b76542ae1850" width=400px height=300px><br>
 Import GeoJSON
     </td>
     <td>
-<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/b59ce7be-c1fb-4782-99e8-a8368388d757" width=50% height=50%><br>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/b59ce7be-c1fb-4782-99e8-a8368388d757" width=400px height=300px><br>
 Bulk Animated Markers
     </td>
 </tr>
