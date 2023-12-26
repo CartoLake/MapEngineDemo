@@ -1,6 +1,18 @@
 # MapEngineDemo
 
-<table><tr><td>
+<table>
+
+  <tr><td>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" ><br>
+Spherical Projection
+</td>
+  <td>
+<img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/7987e50f-139c-4452-b4af-5a49fe92dbab" ><br>
+GeoPDF
+    </td>
+</tr>
+  
+  <tr><td>
 <img src="https://github.com/CartoLake/MapEngineDemo/assets/82988795/f0031bdf-2e1d-4e60-8d53-bb22877a7128" width=400px height=300px><br>
 Spherical Projection
 </td>
