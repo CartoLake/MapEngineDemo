@@ -19,6 +19,10 @@
 #import <CLMMapKit/CLMShapeMapLayer.h>
 #import <CLMMapKit/CLMGeoPDFMapLayer.h>
 
+// Shaded Terrain
+#import <CLMMapKit/CLMGradient.h>
+#import <CLMMapKit/CLMShadedTerrainLayer.h>
+
 // Markers
 #import <CLMMapKit/CLMBulkMarker.h>
 #import <CLMMapKit/CLMBulkMarkerGroup.h>

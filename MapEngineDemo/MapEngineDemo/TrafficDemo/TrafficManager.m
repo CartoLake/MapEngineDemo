@@ -8,6 +8,7 @@
 #import "TrafficManager.h"
 #import "TrafficItem.h"
 #import <CoreLocation/CoreLocation.h>
+#import "TrafficIcons.h"
 
 @interface TrafficManager () {
     
@@ -21,7 +22,7 @@
 
 @property CLMBulkMarkerMapLayer *bulkMarkerLayer;
 
-@property CLMBulkMarkerGroup *markerGroup;
+@property NSMutableDictionary *aircraftTypeToMarkerGroupLookup;
 
 @end
 
@@ -37,12 +38,40 @@
 
 -(void)startTimer {
     
+    self.aircraftTypeToMarkerGroupLookup = [NSMutableDictionary dictionary];
+    
+    
     self.bulkMarkerLayer = [[CLMBulkMarkerMapLayer alloc] init];
     self.bulkMarkerLayer.zOrder = 10000;
     
-    self.markerGroup = [[CLMBulkMarkerGroup alloc] init];
-    self.markerGroup.groupImage = [UIImage imageNamed:@"Airplane.png"];
-    [self.bulkMarkerLayer addMarkerGroup:self.markerGroup];
+    // Add the fighter group
+    CLMBulkMarkerGroup *fighterJetGroup = [[CLMBulkMarkerGroup alloc] init];
+    fighterJetGroup.groupImage = [TrafficIcons fighterJet];
+    [self.aircraftTypeToMarkerGroupLookup setObject:fighterJetGroup
+                                             forKey:@"F18"];
+    [self.bulkMarkerLayer addMarkerGroup:fighterJetGroup];
+
+    // Add the commercial jet group
+    CLMBulkMarkerGroup *commercialJetGroup = [[CLMBulkMarkerGroup alloc] init];
+    commercialJetGroup.groupImage = [TrafficIcons commercialJet];
+    [self.aircraftTypeToMarkerGroupLookup setObject:commercialJetGroup
+                                             forKey:@"757"];
+    [self.bulkMarkerLayer addMarkerGroup:commercialJetGroup];
+
+    // Add the single engine group
+    CLMBulkMarkerGroup *singleEngineGroup = [[CLMBulkMarkerGroup alloc] init];
+    singleEngineGroup.groupImage = [TrafficIcons singleEngine];
+    [self.aircraftTypeToMarkerGroupLookup setObject:singleEngineGroup
+                                             forKey:@"C172"];
+    [self.bulkMarkerLayer addMarkerGroup:singleEngineGroup];
+
+    // Add the multi-radial engine group
+    CLMBulkMarkerGroup *multiRadialGroup = [[CLMBulkMarkerGroup alloc] init];
+    multiRadialGroup.groupImage = [TrafficIcons twinRadial];
+    [self.aircraftTypeToMarkerGroupLookup setObject:multiRadialGroup
+                                             forKey:@"DC3"];
+    [self.bulkMarkerLayer addMarkerGroup:multiRadialGroup];
+
     
     [self.mapView addMapLayer:self.bulkMarkerLayer];
     
@@ -59,7 +88,31 @@
     
     self.trafficItems = [NSMutableArray array];
     
-    for (int i=0; i < 1000; i++) {
+    for (int i=0; i < 6000; i++) {
+
+        // Speed of the aircraft
+        float speedKnots = 0;
+        NSString *aircraftType = @"";
+
+        // Figure out type of aircraft
+        int acftType = i % 4;
+        if (acftType == 0) {
+            speedKnots = (arc4random() % 50) + 100;
+            aircraftType = @"C172";
+        } else if (acftType == 1) {
+            speedKnots = (arc4random() % 300) + 300;
+            aircraftType = @"F18";
+        } else if (acftType == 2) {
+            speedKnots = (arc4random() % 100) + 300;
+            aircraftType = @"757";
+        } else if (acftType == 3) {
+            speedKnots = (arc4random() % 50) + 150;
+            aircraftType = @"DC3";
+        }
+        
+        // Speed up for demo
+        speedKnots = speedKnots * 3.0;
+        
         
         // Generate a fake tail number
         int trafficTailNum = (arc4random() * 10000) % 10000;
@@ -68,10 +121,15 @@
         TrafficItem *item = [[TrafficItem alloc] init];
         item.targetItent = trafficIdent;
         
+        // This is worldwide
         float lat = (((float)(arc4random() % 18000)) / 100.0) - 90;
         float lon = (((float)(arc4random() % 36000)) / 100.0) - 180;
+
+        // This is mainly US
+        lat = (((float)(arc4random() % 2000)) / 100.0) + 30;
+        lon = (((float)(arc4random() % 6000)) / 100.0) - 125;
+
         float heading = ((float)(arc4random() % 360));
-        float speedKnots = (arc4random() % 300) + 150;
         
         CLLocationCoordinate2D trafficPosition = CLLocationCoordinate2DMake(lat, lon);
         
@@ -82,7 +140,9 @@
         [item.targetMarker setRotation:(heading * M_PI / 180.0)];
         
 
-        [self.markerGroup addMarker:item.targetMarker];
+        // Figure out which marker group this target goes in
+        CLMBulkMarkerGroup *group = [self.aircraftTypeToMarkerGroupLookup objectForKey:aircraftType];
+        [group addMarker:item.targetMarker];
 
         [self.trafficItems addObject:item];
 

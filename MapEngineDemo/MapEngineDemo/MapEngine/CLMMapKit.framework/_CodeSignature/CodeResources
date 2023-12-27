@@ -24,9 +24,13 @@
 		<data>
 		dyOvRc3RU/L6iwrr+Tu+UeYA6nI=
 		</data>
+		<key>Headers/CLMGradient.h</key>
+		<data>
+		OaKp4Itzfb9oapn48wysheOms5Q=
+		</data>
 		<key>Headers/CLMMapKitLite.h</key>
 		<data>
-		1HSxDntblHdZ1E0hm8EIO35txHw=
+		VQvTgl4v8aCuyLYGAzXaENZjISE=
 		</data>
 		<key>Headers/CLMMapLayer.h</key>
 		<data>
@@ -39,6 +43,10 @@
 		<key>Headers/CLMMapView.h</key>
 		<data>
 		FoQ1YD0C7lcXLOgFjLxEsHGQZg4=
+		</data>
+		<key>Headers/CLMShadedTerrainLayer.h</key>
+		<data>
+		8kCQdU4DmMM7+fDixaAJLB+ZemM=
 		</data>
 		<key>Headers/CLMShapeMapLayer.h</key>
 		<data>
@@ -98,11 +106,18 @@
 			3M63wGfpBjBcTXsAOOCWXBz68yYS6U9Yf+0RNHbb9BI=
 			</data>
 		</dict>
+		<key>Headers/CLMGradient.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y0nG6oZHlIXmaPz27jDKk4BypdszKeo1Rt9kPqutd1c=
+			</data>
+		</dict>
 		<key>Headers/CLMMapKitLite.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vmo+W8H4+OgExPamHy5PphbbMZeGcl70mZnwdtrhcfw=
+			rOXvtCywK94mUUy2PmuVyDGwkiZ0+fkOVdKUsCMe/e0=
 			</data>
 		</dict>
 		<key>Headers/CLMMapLayer.h</key>
@@ -124,6 +139,13 @@
 			<key>hash2</key>
 			<data>
 			YimdvZ2wQRht7LnfxMA3oak8EmpjpHcLr3/JZA64dUg=
+			</data>
+		</dict>
+		<key>Headers/CLMShadedTerrainLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			u6qewlTkcrwHhCtE/0uAl/nb5uAxASc3XeF0ol5gb6g=
 			</data>
 		</dict>
 		<key>Headers/CLMShapeMapLayer.h</key>
