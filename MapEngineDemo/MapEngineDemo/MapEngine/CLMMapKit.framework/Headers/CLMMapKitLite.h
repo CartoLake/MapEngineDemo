@@ -18,6 +18,7 @@
 #import <CLMMapKit/CLMEdgeEfffectMapLayer.h>
 #import <CLMMapKit/CLMShapeMapLayer.h>
 #import <CLMMapKit/CLMGeoPDFMapLayer.h>
+#import <CLMMapKit/CLMMBTilesMapLayer.h>
 
 // Shaded Terrain
 #import <CLMMapKit/CLMGradient.h>
@@ -27,6 +28,9 @@
 #import <CLMMapKit/CLMBulkMarker.h>
 #import <CLMMapKit/CLMBulkMarkerGroup.h>
 #import <CLMMapKit/CLMBulkMarkerMapLayer.h>
+
+// Text Layers
+#import <CLMMapKit/CLMTextMapLayer.h>
 
 //! Project version number for CLMMapKitLite.
 FOUNDATION_EXPORT double CLMMapKitLiteVersionNumber;

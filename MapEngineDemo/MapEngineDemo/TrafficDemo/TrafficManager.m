@@ -36,6 +36,18 @@
     return self;
 }
 
+// Remove the traffic manager from the map
+-(void)removeFromMap {
+    
+    [self.trafficUpdateTimer invalidate];
+    self.trafficUpdateTimer = nil;
+    
+    [self.mapView removeMapLayer:self.bulkMarkerLayer];
+    self.aircraftTypeToMarkerGroupLookup = nil;
+    
+}
+
+
 -(void)startTimer {
     
     self.aircraftTypeToMarkerGroupLookup = [NSMutableDictionary dictionary];

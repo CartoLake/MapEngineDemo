@@ -28,9 +28,13 @@
 		<data>
 		OaKp4Itzfb9oapn48wysheOms5Q=
 		</data>
+		<key>Headers/CLMMBTilesMapLayer.h</key>
+		<data>
+		Ro+NO2SZjAvbHoSENoYaD261DuY=
+		</data>
 		<key>Headers/CLMMapKitLite.h</key>
 		<data>
-		VQvTgl4v8aCuyLYGAzXaENZjISE=
+		EB62sl0HU9mavYKHybePLPRbvLk=
 		</data>
 		<key>Headers/CLMMapLayer.h</key>
 		<data>
@@ -52,6 +56,10 @@
 		<data>
 		O00uPnH+AC1t4ciFVY1VUZkGq4I=
 		</data>
+		<key>Headers/CLMTextMapLayer.h</key>
+		<data>
+		/BlQDBWlxgOb9jrfDMW93eT+wC4=
+		</data>
 		<key>Headers/CLMTileMapLayer.h</key>
 		<data>
 		peshdKzbuFoFu9tpQG4lf1ab7iM=
@@ -66,7 +74,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		hf8rqRKGvXHi/Svou+IkVwtwSW8=
+		NABxNiAo8xo0I40y3jaHmHUTAXU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -113,11 +121,18 @@
 			y0nG6oZHlIXmaPz27jDKk4BypdszKeo1Rt9kPqutd1c=
 			</data>
 		</dict>
+		<key>Headers/CLMMBTilesMapLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jFI55XCq46IqN2BNEYWBrE5RygukT2cRv2AIsIJvcgs=
+			</data>
+		</dict>
 		<key>Headers/CLMMapKitLite.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOXvtCywK94mUUy2PmuVyDGwkiZ0+fkOVdKUsCMe/e0=
+			ijR4ckQQCel4KRAT5Nv6gHqupt3ude8IqmGEMBJfotU=
 			</data>
 		</dict>
 		<key>Headers/CLMMapLayer.h</key>
@@ -155,6 +170,13 @@
 			NWaEd2pkXci1+AYJdqAQvL/URUwRXEBigUM3oQFwQww=
 			</data>
 		</dict>
+		<key>Headers/CLMTextMapLayer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DSrkJI+tpt9h3YC0ImC69+yW/mRaVXJDdCYOED/qzr4=
+			</data>
+		</dict>
 		<key>Headers/CLMTileMapLayer.h</key>
 		<dict>
 			<key>hash2</key>
@@ -173,7 +195,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tX7rvYZ/Knr1aozw/NO+l1u5IBoWDiNbY9J84DPO5B4=
+			wg0AQ2DhIkSU1Su30EOyJnMINbgr6Bfs6GQ5ec5I3VQ=
 			</data>
 		</dict>
 	</dict>

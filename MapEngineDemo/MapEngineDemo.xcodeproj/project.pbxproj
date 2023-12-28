@@ -14,6 +14,9 @@
 		8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8132922C2B33F1CA00B17383 /* Assets.xcassets */; };
 		813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8132922E2B33F1CA00B17383 /* LaunchScreen.storyboard */; };
 		813292332B33F1CA00B17383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 813292322B33F1CA00B17383 /* main.m */; };
+		814987802B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */; };
+		814987812B3E2C9600214867 /* 13003.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 8149877F2B3E2C9600214867 /* 13003.mbtiles */; };
+		814987852B3E2CE600214867 /* ne_50m_geography_regions_points.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */; };
 		81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; };
 		81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */; };
@@ -53,6 +56,9 @@
 		813292312B33F1CA00B17383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813292322B33F1CA00B17383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8132923A2B33F1F700B17383 /* CLMMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLMMapKit.framework; sourceTree = "<group>"; };
+		8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NH_Mount_Washington_20210410_TM_geo.pdf; sourceTree = "<group>"; };
+		8149877F2B3E2C9600214867 /* 13003.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = 13003.mbtiles; sourceTree = "<group>"; };
+		814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ne_50m_geography_regions_points.geojson; sourceTree = "<group>"; };
 		81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starmap_2020_4k_4096.jpg; sourceTree = "<group>"; };
 		81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00329IL29.PDF; sourceTree = "<group>"; };
 		81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AT0-0005SinglePart.geojson"; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 		81D9446E2B33F5EE00DD4D26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */,
+				8149877F2B3E2C9600214867 /* 13003.mbtiles */,
+				8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */,
 				81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */,
 				81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */,
 				81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */,
@@ -216,10 +225,13 @@
 				813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */,
 				8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */,
 				81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */,
+				814987802B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf in Resources */,
 				81D944842B3A300500DD4D26 /* proj.db in Resources */,
 				81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */,
 				8132922B2B33F1C900B17383 /* Main.storyboard in Resources */,
+				814987852B3E2CE600214867 /* ne_50m_geography_regions_points.geojson in Resources */,
 				81D944832B3A300500DD4D26 /* AT0-0005SinglePart.geojson in Resources */,
+				814987812B3E2C9600214867 /* 13003.mbtiles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

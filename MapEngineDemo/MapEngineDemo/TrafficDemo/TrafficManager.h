@@ -12,7 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TrafficManager : NSObject
 
+// Add the traffic manager to the map
 -(id)initWithMapView:(CLMMapView *)mapView;
+
+// Remove the traffic manager from the map
+-(void)removeFromMap;
 
 @end
 
