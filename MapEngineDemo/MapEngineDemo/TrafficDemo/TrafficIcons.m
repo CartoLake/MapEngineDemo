@@ -417,7 +417,9 @@
     UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return i;}
+    return i;
+    
+}
 
 
 @end

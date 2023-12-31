@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import <CLMMapKit/CLMMapKitLite.h>
 #import "TrafficManager.h"
+#import "CurrentLocationManager.h"
+#import "CurrentLocationIcons.h"
 
 @interface ViewController ()
 
@@ -33,6 +35,16 @@
 @property UIButton *shadedTerrainBtn;
 @property CLMShadedTerrainLayer *shadedTerrainLayer;
 
+// Marker Layer
+@property UIButton *markerLayerBtn;
+@property CLMMarkerMapLayer *markerLayer;
+@property CLMMarker *currentLocationMarker;
+@property CurrentLocationManager *currentLocationManager;
+
+// Diagnostic Layer
+@property UIButton *diagnosticBtn;
+@property CLMDiagnosticTileLayer *diagnosticLayer;
+
 @end
 
 #define zOrderGrayBase          5
@@ -41,6 +53,8 @@
 #define zOrderATTrail           1000
 #define zOrderGeoPDF            1500
 #define zOrderMBTiles           1600
+#define zOrderMarkerLayer       1700
+#define zOrderDiagnosticLayer   1800
 #define zOrderEdgeEffect        2000
 
 @implementation ViewController
@@ -150,6 +164,7 @@
     
     // Set the camera at the center of the United States
     CLMCoordinate3D centerOfTheUS = CLMCoordinate3DMake(39.8283, -98.5795, 10000000);
+        
     [self.mapView setMapCenter:centerOfTheUS duration:0];
     
 }
@@ -249,6 +264,35 @@
     [self.view addSubview:self.shadedTerrainBtn];
 
     
+    self.markerLayerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.markerLayerBtn setTitle:@"Current Location" forState:UIControlStateNormal];
+    [self.markerLayerBtn setBackgroundColor:[UIColor blackColor]];
+    [self.markerLayerBtn setTintColor:[UIColor blackColor]];
+    self.markerLayerBtn.frame = CGRectMake(56+186+186+186+186,
+                                          self.view.frame.size.height - 50,
+                                          180,44);
+    self.markerLayerBtn.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.markerLayerBtn addTarget:self
+                           action:@selector(markerLayerTapped:)
+           forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.markerLayerBtn];
+
+    
+    
+    
+    self.diagnosticBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.diagnosticBtn setTitle:@"Diagnostic Layer" forState:UIControlStateNormal];
+    [self.diagnosticBtn setBackgroundColor:[UIColor blackColor]];
+    [self.diagnosticBtn setTintColor:[UIColor blackColor]];
+    self.diagnosticBtn.frame = CGRectMake(56,
+                                          self.view.frame.size.height - 50 - 56,
+                                          180,44);
+    self.diagnosticBtn.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.diagnosticBtn addTarget:self
+                           action:@selector(diagnosticLayerTapped:)
+           forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.diagnosticBtn];
+
     
 }
 
@@ -439,6 +483,91 @@
     
     [self.mapView removeMapLayer:self.shadedTerrainLayer];
     self.shadedTerrainLayer = nil;
+    
+}
+
+// -- ------ ------- ----------------------------------------
+// -- Marker Example ----------------------------------------
+// -- ------ ------- ----------------------------------------
+-(void)markerLayerTapped:(id)sender {
+    
+    if (self.markerLayerBtn.selected) {
+        [self hideMarkerLayer];
+        self.markerLayerBtn.selected = NO;
+        [self.markerLayerBtn setBackgroundColor:[UIColor blackColor]];
+    } else {
+        [self showMarkerLayer];
+        self.markerLayerBtn.selected = YES;
+        [self.markerLayerBtn setBackgroundColor:[UIColor darkGrayColor]];
+    }
+    
+    
+}
+
+-(void)showMarkerLayer {
+
+    // Create the current location marker layer
+    self.markerLayer = [[CLMMarkerMapLayer alloc] init];
+    self.markerLayer.zOrder = zOrderMarkerLayer;
+    [self.mapView addMapLayer:self.markerLayer];
+    
+    // Create the current location marker
+    self.currentLocationMarker = [[CLMMarker alloc] init];
+    self.currentLocationMarker.markerImage = [CurrentLocationIcons currentLocationDot];
+    [self.markerLayer addMarker:self.currentLocationMarker];
+    
+    // Spin up the current location listener
+    self.currentLocationManager = [[CurrentLocationManager alloc] initWithLocationMarker:self.currentLocationMarker];
+    
+}
+
+-(void)hideMarkerLayer {
+    
+    // Shut down the current location listener
+    [self.currentLocationManager removeFromMap];
+    self.currentLocationManager = nil;
+    
+    // Remove the marker
+    [self.markerLayer removeMarker:self.currentLocationMarker];
+    
+    // Remove the map layer
+    [self.mapView removeMapLayer:self.markerLayer];
+    self.markerLayer = nil;
+    
+}
+
+
+// -- ---------- ----- ------- ----------------------------------------
+// -- Diagnostic Layer Example ----------------------------------------
+// -- ---------- ----- ------- ----------------------------------------
+
+-(void)diagnosticLayerTapped:(id)sender {
+    
+    if (self.diagnosticBtn.selected) {
+        [self hideDiagnosticLayer];
+        self.diagnosticBtn.selected = NO;
+        [self.diagnosticBtn setBackgroundColor:[UIColor blackColor]];
+    } else {
+        [self showDiagnosticLayer];
+        self.diagnosticBtn.selected = YES;
+        [self.diagnosticBtn setBackgroundColor:[UIColor darkGrayColor]];
+    }
+}
+
+-(void)showDiagnosticLayer {
+
+    // Create the current location marker layer
+    self.diagnosticLayer = [[CLMDiagnosticTileLayer alloc] init];
+    self.diagnosticLayer.zOrder = zOrderDiagnosticLayer;
+    [self.mapView addMapLayer:self.diagnosticLayer];
+    
+}
+
+-(void)hideDiagnosticLayer {
+   
+    // Remove the map layer
+    [self.mapView removeMapLayer:self.diagnosticLayer];
+    self.diagnosticLayer = nil;
     
 }
 

@@ -10,6 +10,7 @@
 
 // Core items
 #import <CLMMapKit/CLMMapView.h>
+#import <CLMMapKit/CLMCachedImage.h>
 
 // Layers
 #import <CLMMapKit/CLMMapLayer.h>
@@ -19,6 +20,7 @@
 #import <CLMMapKit/CLMShapeMapLayer.h>
 #import <CLMMapKit/CLMGeoPDFMapLayer.h>
 #import <CLMMapKit/CLMMBTilesMapLayer.h>
+#import <CLMMapKit/CLMDiagnosticTileLayer.h>
 
 // Shaded Terrain
 #import <CLMMapKit/CLMGradient.h>
@@ -28,6 +30,7 @@
 #import <CLMMapKit/CLMBulkMarker.h>
 #import <CLMMapKit/CLMBulkMarkerGroup.h>
 #import <CLMMapKit/CLMBulkMarkerMapLayer.h>
+#import <CLMMapKit/CLMMarkerMapLayer.h>
 
 // Text Layers
 #import <CLMMapKit/CLMTextMapLayer.h>

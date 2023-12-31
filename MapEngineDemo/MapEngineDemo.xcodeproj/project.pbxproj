@@ -17,6 +17,8 @@
 		814987802B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */; };
 		814987812B3E2C9600214867 /* 13003.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 8149877F2B3E2C9600214867 /* 13003.mbtiles */; };
 		814987852B3E2CE600214867 /* ne_50m_geography_regions_points.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */; };
+		81C9052A2B40EECB00B6C5A9 /* CurrentLocationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C905262B40EECB00B6C5A9 /* CurrentLocationIcons.m */; };
+		81C9052B2B40EECB00B6C5A9 /* CurrentLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C905292B40EECB00B6C5A9 /* CurrentLocationManager.m */; };
 		81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; };
 		81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */; };
@@ -59,6 +61,10 @@
 		8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NH_Mount_Washington_20210410_TM_geo.pdf; sourceTree = "<group>"; };
 		8149877F2B3E2C9600214867 /* 13003.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = 13003.mbtiles; sourceTree = "<group>"; };
 		814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ne_50m_geography_regions_points.geojson; sourceTree = "<group>"; };
+		81C905262B40EECB00B6C5A9 /* CurrentLocationIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationIcons.m; sourceTree = "<group>"; };
+		81C905272B40EECB00B6C5A9 /* CurrentLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationManager.h; sourceTree = "<group>"; };
+		81C905282B40EECB00B6C5A9 /* CurrentLocationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationIcons.h; sourceTree = "<group>"; };
+		81C905292B40EECB00B6C5A9 /* CurrentLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationManager.m; sourceTree = "<group>"; };
 		81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starmap_2020_4k_4096.jpg; sourceTree = "<group>"; };
 		81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00329IL29.PDF; sourceTree = "<group>"; };
 		81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AT0-0005SinglePart.geojson"; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		8132921F2B33F1C900B17383 /* MapEngineDemo */ = {
 			isa = PBXGroup;
 			children = (
+				81C905252B40EECB00B6C5A9 /* CurrentLocationDemo */,
 				81D944972B3A6ADE00DD4D26 /* TrafficDemo */,
 				81D9446E2B33F5EE00DD4D26 /* Resources */,
 				813292392B33F1E600B17383 /* MapEngine */,
@@ -127,6 +134,18 @@
 				8132923A2B33F1F700B17383 /* CLMMapKit.framework */,
 			);
 			path = MapEngine;
+			sourceTree = "<group>";
+		};
+		81C905252B40EECB00B6C5A9 /* CurrentLocationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81C905262B40EECB00B6C5A9 /* CurrentLocationIcons.m */,
+				81C905272B40EECB00B6C5A9 /* CurrentLocationManager.h */,
+				81C905282B40EECB00B6C5A9 /* CurrentLocationIcons.h */,
+				81C905292B40EECB00B6C5A9 /* CurrentLocationManager.m */,
+			);
+			name = CurrentLocationDemo;
+			path = ../../../MapEngine/CLMMapKitLiteDemo/CurrentLocationDemo;
 			sourceTree = "<group>";
 		};
 		81D944692B33F52B00DD4D26 /* Frameworks */ = {
@@ -263,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				813292282B33F1C900B17383 /* ViewController.m in Sources */,
+				81C9052B2B40EECB00B6C5A9 /* CurrentLocationManager.m in Sources */,
+				81C9052A2B40EECB00B6C5A9 /* CurrentLocationIcons.m in Sources */,
 				81D9449C2B3A6ADE00DD4D26 /* TrafficManager.m in Sources */,
 				813292222B33F1C900B17383 /* AppDelegate.m in Sources */,
 				813292332B33F1CA00B17383 /* main.m in Sources */,
