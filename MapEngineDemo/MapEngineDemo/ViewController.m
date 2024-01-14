@@ -45,17 +45,25 @@
 @property UIButton *diagnosticBtn;
 @property CLMDiagnosticTileLayer *diagnosticLayer;
 
+// Natural Atlas Layer
+@property UIButton *naturalAtlasLayerBtn;
+@property CLMShapeMapLayer *naLandLayer;
+@property CLMShapeMapLayer *naLakesShapeLayer;
+@property CLMShapeMapLayer *naAdminLinesShapeLayer;
+
+
 @end
 
-#define zOrderGrayBase          5
-#define zOrderOSMRaster         100
-#define zOrderShadedTerrain     110
-#define zOrderATTrail           1000
-#define zOrderGeoPDF            1500
-#define zOrderMBTiles           1600
-#define zOrderMarkerLayer       1700
-#define zOrderDiagnosticLayer   1800
-#define zOrderEdgeEffect        2000
+#define zOrderGrayBase              5
+#define zOrderOSMRaster             100
+#define zOrderShadedTerrain         110
+#define zOrderATTrail               1000
+#define zOrderGeoPDF                1500
+#define zOrderMBTiles               1600
+#define zOrderMarkerLayer           1700
+#define zOrderDiagnosticLayer       1800
+#define zOrderNaturalAtlasLayer     1900
+#define zOrderEdgeEffect            3000
 
 @implementation ViewController
 
@@ -293,6 +301,22 @@
            forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.diagnosticBtn];
 
+    
+    self.naturalAtlasLayerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.naturalAtlasLayerBtn setTitle:@"Natural Atlas" forState:UIControlStateNormal];
+    [self.naturalAtlasLayerBtn setBackgroundColor:[UIColor blackColor]];
+    [self.naturalAtlasLayerBtn setTintColor:[UIColor blackColor]];
+    self.naturalAtlasLayerBtn.frame = CGRectMake(56,
+                                          self.view.frame.size.height - 50 - 56 - 56,
+                                          180,44);
+    self.naturalAtlasLayerBtn.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.naturalAtlasLayerBtn addTarget:self
+                           action:@selector(naturalAtlasLayerTapped:)
+           forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.naturalAtlasLayerBtn];
+
+    
+    
     
 }
 
@@ -569,6 +593,129 @@
     [self.mapView removeMapLayer:self.diagnosticLayer];
     self.diagnosticLayer = nil;
     
+}
+
+// -- ------- ----- ----- ------- ----------------------------------------
+// -- Natural Atlas Layer Example ----------------------------------------
+// -- ------- ----- ----- ------- ----------------------------------------
+
+-(void)naturalAtlasLayerTapped:(id)sender {
+    
+    if (self.naturalAtlasLayerBtn.selected) {
+        [self hideNaturalAtlasLayer];
+        self.naturalAtlasLayerBtn.selected = NO;
+        [self.naturalAtlasLayerBtn setBackgroundColor:[UIColor blackColor]];
+    } else {
+        [self showNaturalAtlasLayer];
+        self.naturalAtlasLayerBtn.selected = YES;
+        [self.naturalAtlasLayerBtn setBackgroundColor:[UIColor darkGrayColor]];
+    }
+}
+
+-(void)showNaturalAtlasLayer {
+    
+    // These variables change the look and feel of the layer
+    bool darkTheme = true;
+    bool lowResShapes = false;
+
+    // When shape files are imported, the resulting metadata can be cached for faster
+    // loading in the future.  This will add a mapcache folder to the documents directory
+    // of the app and that's used below to set the cache path for each import.
+    // The first time the file is imported, it will take a bit of time, the second time
+    // the layer is added, it will be faster
+    NSString *cachePath = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] path];
+    cachePath = [cachePath stringByAppendingPathComponent:@"mapcache"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSError *error = nil;
+    [fm createDirectoryAtPath:cachePath
+  withIntermediateDirectories:YES
+                   attributes:nil
+                        error:&error];
+
+
+    NSString *admin0Path = [[NSBundle mainBundle] pathForResource:@"ne_50m_admin_0_boundary_lines_land"
+                                                           ofType:@"shp"];
+    NSString *admin1Path =  [[NSBundle mainBundle] pathForResource:@"ne_50m_admin_1_states_provinces"
+                                                          ofType:@"shp"];
+    NSString *landPath = [[NSBundle mainBundle] pathForResource:@"ne_50m_land"
+                                                         ofType:@"shp"];
+
+    // Import the land shape file
+    if (lowResShapes) {
+        landPath = [[NSBundle mainBundle] pathForResource:@"ne_110m_land"
+                                                        ofType:@"shp"];
+        admin0Path = [[NSBundle mainBundle] pathForResource:@"ne_110m_admin_0_boundary_lines_land"
+                                                               ofType:@"shp"];
+        admin1Path =  [[NSBundle mainBundle] pathForResource:@"ne_110m_admin_1_states_provinces"
+                                                              ofType:@"shp"];
+
+    }
+
+    
+    // Add the land layer
+    self.naLandLayer = [[CLMShapeMapLayer alloc] init];
+    self.naLandLayer.zOrder = zOrderNaturalAtlasLayer;
+    [self.mapView addMapLayer:self.naLandLayer];
+    [self.naLandLayer setLayerShapeColor:102.0/255.0 green:146.0/255.0 blue:159.0/255.0 alpha:1.0];
+    if (darkTheme) {
+        [self.naLandLayer setLayerShapeColor:55.0/255.0 green:55.0/255.0 blue:57.0/255.0 alpha:1.0];
+    }
+
+    
+    // Configure the cache file for the land import
+    NSString *landCacheFile = [[[landPath lastPathComponent] stringByDeletingPathExtension] stringByAppendingPathExtension:@"cache"];
+    landCacheFile = [cachePath stringByAppendingPathComponent:landCacheFile];
+    
+    [self.naLandLayer loadShapeFile:landPath
+                 polygonsAsLines:NO
+                          cacheFile:landCacheFile
+                            options:@{SHAPE_FILE_IMPORT_USE_SPHERICAL_EARCUT:@(YES)}];
+
+        
+    // Add the lakes layer
+    self.naLakesShapeLayer = [[CLMShapeMapLayer alloc] init];
+    self.naLakesShapeLayer.zOrder = zOrderNaturalAtlasLayer + 1;
+    [self.mapView addMapLayer:self.naLakesShapeLayer];
+    [self.naLakesShapeLayer setLayerShapeColor:48.0/255.0 green:77.0/255.0 blue:102.0/255.0 alpha:1.0];
+    if (darkTheme) {
+        [self.naLakesShapeLayer setLayerShapeColor:27.0/255.0 green:25.0/255.0 blue:30.0/255.0 alpha:1.0];
+    }
+    
+    [self.naLakesShapeLayer loadShapeFile:[[NSBundle mainBundle] pathForResource:@"ne_50m_lakes"
+                                                                      ofType:@"shp"]
+                      polygonsAsLines:NO];
+    
+    // Add the outline layer
+    // This demo shows how multiple shape files can be imported into a single
+    // shape layer
+    self.naAdminLinesShapeLayer = [[CLMShapeMapLayer alloc] init];
+    self.naAdminLinesShapeLayer.zOrder = zOrderNaturalAtlasLayer+2;
+    [self.mapView addMapLayer:self.naAdminLinesShapeLayer ];
+    [self.naAdminLinesShapeLayer setLayerShapeColor:200.0/255.0
+                                              green:200.0/255.0
+                                               blue:200.0/255.0
+                                              alpha:1.0];
+    [self.naAdminLinesShapeLayer loadShapeFile:admin0Path
+                               polygonsAsLines:NO];
+    [self.naAdminLinesShapeLayer loadShapeFile:admin1Path
+                               polygonsAsLines:YES];
+    [self.naAdminLinesShapeLayer loadShapeFile:landPath
+                               polygonsAsLines:YES];
+
+    
+    
+}
+
+-(void)hideNaturalAtlasLayer {
+   
+    // Remove the map layer
+    [self.mapView removeMapLayer:self.naLandLayer];
+    [self.mapView removeMapLayer:self.naLakesShapeLayer];
+    [self.mapView removeMapLayer:self.naAdminLinesShapeLayer];
+    self.naLandLayer = nil;
+    self.naLakesShapeLayer = nil;
+    self.naAdminLinesShapeLayer = nil;
+
 }
 
 

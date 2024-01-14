@@ -16,6 +16,10 @@
 		<data>
 		ElOw3LUKVrwQ0fWma59GCZd5myM=
 		</data>
+		<key>Headers/CLMCachedImage.h</key>
+		<data>
+		Ef78XMrTaXHlasLcx+sOJ5IbIv4=
+		</data>
 		<key>Headers/CLMDiagnosticTileLayer.h</key>
 		<data>
 		l03JrBpyihffXPi5r0/iKwX73vA=
@@ -38,7 +42,7 @@
 		</data>
 		<key>Headers/CLMMapKitLite.h</key>
 		<data>
-		K9c9ybypAol5gtdDIJ7OG/3QJ80=
+		6nD0KrOi1ZbC8SoTOgZBDJNVbYE=
 		</data>
 		<key>Headers/CLMMapLayer.h</key>
 		<data>
@@ -112,6 +116,13 @@
 			CzSM4ZJ2jtdUZ/tG4VT0emR6QgajC+x3RNaixaXe80s=
 			</data>
 		</dict>
+		<key>Headers/CLMCachedImage.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CDJA34RQjRCjaKOwyhANipkQd2DZV8P+fiZ5X0Fy4nk=
+			</data>
+		</dict>
 		<key>Headers/CLMDiagnosticTileLayer.h</key>
 		<dict>
 			<key>hash2</key>
@@ -151,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1FKaN6TnKiCd8+Md2UQsYaQPMFJWzzjr6fKWRn1kHCQ=
+			oKBNS5PS4f7DNfHQwsOFa8f/5fPjjD/xR+FsCAAnL+c=
 			</data>
 		</dict>
 		<key>Headers/CLMMapLayer.h</key>

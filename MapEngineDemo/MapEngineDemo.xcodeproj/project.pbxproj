@@ -19,6 +19,13 @@
 		814987852B3E2CE600214867 /* ne_50m_geography_regions_points.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */; };
 		81C9052A2B40EECB00B6C5A9 /* CurrentLocationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C905262B40EECB00B6C5A9 /* CurrentLocationIcons.m */; };
 		81C9052B2B40EECB00B6C5A9 /* CurrentLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C905292B40EECB00B6C5A9 /* CurrentLocationManager.m */; };
+		81C905B62B54948C00B6C5A9 /* ne_50m_admin_0_boundary_lines_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905AF2B54948C00B6C5A9 /* ne_50m_admin_0_boundary_lines_land.shp */; };
+		81C905B72B54948C00B6C5A9 /* ne_110m_admin_1_states_provinces.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B02B54948C00B6C5A9 /* ne_110m_admin_1_states_provinces.shp */; };
+		81C905B82B54948C00B6C5A9 /* ne_110m_admin_0_boundary_lines_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B12B54948C00B6C5A9 /* ne_110m_admin_0_boundary_lines_land.shp */; };
+		81C905B92B54948C00B6C5A9 /* ne_50m_admin_1_states_provinces.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B22B54948C00B6C5A9 /* ne_50m_admin_1_states_provinces.shp */; };
+		81C905BA2B54948C00B6C5A9 /* ne_110m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B32B54948C00B6C5A9 /* ne_110m_land.shp */; };
+		81C905BB2B54948C00B6C5A9 /* ne_50m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B42B54948C00B6C5A9 /* ne_50m_land.shp */; };
+		81C905BC2B54948C00B6C5A9 /* ne_50m_lakes.shp in Resources */ = {isa = PBXBuildFile; fileRef = 81C905B52B54948C00B6C5A9 /* ne_50m_lakes.shp */; };
 		81D9446C2B33F55100DD4D26 /* CLMMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; };
 		81D9446D2B33F55100DD4D26 /* CLMMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8132923A2B33F1F700B17383 /* CLMMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */; };
@@ -65,6 +72,13 @@
 		81C905272B40EECB00B6C5A9 /* CurrentLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationManager.h; sourceTree = "<group>"; };
 		81C905282B40EECB00B6C5A9 /* CurrentLocationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationIcons.h; sourceTree = "<group>"; };
 		81C905292B40EECB00B6C5A9 /* CurrentLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationManager.m; sourceTree = "<group>"; };
+		81C905AF2B54948C00B6C5A9 /* ne_50m_admin_0_boundary_lines_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_50m_admin_0_boundary_lines_land.shp; sourceTree = "<group>"; };
+		81C905B02B54948C00B6C5A9 /* ne_110m_admin_1_states_provinces.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_110m_admin_1_states_provinces.shp; sourceTree = "<group>"; };
+		81C905B12B54948C00B6C5A9 /* ne_110m_admin_0_boundary_lines_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_110m_admin_0_boundary_lines_land.shp; sourceTree = "<group>"; };
+		81C905B22B54948C00B6C5A9 /* ne_50m_admin_1_states_provinces.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_50m_admin_1_states_provinces.shp; sourceTree = "<group>"; };
+		81C905B32B54948C00B6C5A9 /* ne_110m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_110m_land.shp; sourceTree = "<group>"; };
+		81C905B42B54948C00B6C5A9 /* ne_50m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_50m_land.shp; sourceTree = "<group>"; };
+		81C905B52B54948C00B6C5A9 /* ne_50m_lakes.shp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne_50m_lakes.shp; sourceTree = "<group>"; };
 		81D9446F2B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starmap_2020_4k_4096.jpg; sourceTree = "<group>"; };
 		81D9447F2B3A300500DD4D26 /* 00329IL29.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 00329IL29.PDF; sourceTree = "<group>"; };
 		81D944802B3A300500DD4D26 /* AT0-0005SinglePart.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AT0-0005SinglePart.geojson"; sourceTree = "<group>"; };
@@ -158,6 +172,13 @@
 		81D9446E2B33F5EE00DD4D26 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81C905AF2B54948C00B6C5A9 /* ne_50m_admin_0_boundary_lines_land.shp */,
+				81C905B22B54948C00B6C5A9 /* ne_50m_admin_1_states_provinces.shp */,
+				81C905B52B54948C00B6C5A9 /* ne_50m_lakes.shp */,
+				81C905B42B54948C00B6C5A9 /* ne_50m_land.shp */,
+				81C905B12B54948C00B6C5A9 /* ne_110m_admin_0_boundary_lines_land.shp */,
+				81C905B02B54948C00B6C5A9 /* ne_110m_admin_1_states_provinces.shp */,
+				81C905B32B54948C00B6C5A9 /* ne_110m_land.shp */,
 				814987842B3E2CE600214867 /* ne_50m_geography_regions_points.geojson */,
 				8149877F2B3E2C9600214867 /* 13003.mbtiles */,
 				8149877E2B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf */,
@@ -244,11 +265,18 @@
 				813292302B33F1CA00B17383 /* LaunchScreen.storyboard in Resources */,
 				8132922D2B33F1CA00B17383 /* Assets.xcassets in Resources */,
 				81D944702B33F60A00DD4D26 /* starmap_2020_4k_4096.jpg in Resources */,
+				81C905BC2B54948C00B6C5A9 /* ne_50m_lakes.shp in Resources */,
 				814987802B3E2C9600214867 /* NH_Mount_Washington_20210410_TM_geo.pdf in Resources */,
+				81C905B62B54948C00B6C5A9 /* ne_50m_admin_0_boundary_lines_land.shp in Resources */,
+				81C905B72B54948C00B6C5A9 /* ne_110m_admin_1_states_provinces.shp in Resources */,
 				81D944842B3A300500DD4D26 /* proj.db in Resources */,
+				81C905BA2B54948C00B6C5A9 /* ne_110m_land.shp in Resources */,
 				81D944822B3A300500DD4D26 /* 00329IL29.PDF in Resources */,
 				8132922B2B33F1C900B17383 /* Main.storyboard in Resources */,
+				81C905BB2B54948C00B6C5A9 /* ne_50m_land.shp in Resources */,
+				81C905B92B54948C00B6C5A9 /* ne_50m_admin_1_states_provinces.shp in Resources */,
 				814987852B3E2CE600214867 /* ne_50m_geography_regions_points.geojson in Resources */,
+				81C905B82B54948C00B6C5A9 /* ne_110m_admin_0_boundary_lines_land.shp in Resources */,
 				81D944832B3A300500DD4D26 /* AT0-0005SinglePart.geojson in Resources */,
 				814987812B3E2C9600214867 /* 13003.mbtiles in Resources */,
 			);
